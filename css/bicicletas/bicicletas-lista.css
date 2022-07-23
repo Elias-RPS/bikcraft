@@ -16,10 +16,15 @@
 .bicicletas-lista ul {
   display: flex;
   gap: 40px;
-  padding: 0 20px;
+  padding: 0 20px 10px 20px;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+  overflow-x: auto;
+}
+
+.bicicletas-lista li {
+  min-width: 280px;
 }
 
 .bicicletas-lista a {
@@ -28,6 +33,7 @@
 
 .bicicletas-lista img {
   margin-bottom: 16px;
+  transition: 0.2s;
 }
 
 .bicicletas-lista h3 {
@@ -42,8 +48,28 @@
   width: 12px;
   margin-right: 8px;
   background-color: var(--cor-p1);
+  transition: 0.2s;
+}
+
+.bicicletas-lista a:hover img {
+  box-shadow: 4px 2px 2px var(--cor-5);
+}
+
+.bicicletas-lista a:hover h3::before {
+  width: 24px;
+  box-shadow: 4px 2px 2px var(--cor-5);
 }
 
 .bicicletas-lista li span {
   padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas-lista {
+    padding-bottom: 60px;
+  }
+
+  .bicicletas-lista ul {
+    gap: 20px;
+  }
 }
